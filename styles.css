@@ -263,3 +263,50 @@ footer a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
+
+/* Services Hero */
+.services-hero {
+  background: linear-gradient(135deg, #4a90e2, #ffb400, #2c3e50);
+  background-size: 300% 300%;
+  animation: heroGradient 20s ease infinite;
+}
+.services-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.services-hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Service Cards */
+#services .card {
+  min-height: 250px;
+}
+#services .card h3 {
+  margin: 1rem 0;
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+#services .card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: #fff;
+}
+.cta-section h2 {
+  color: #fff;
+}
+.cta-section p {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+
+
