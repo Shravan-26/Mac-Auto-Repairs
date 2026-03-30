@@ -10,8 +10,8 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <nav class="navbar">
+    <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
     <a href="about.html"><i class="fas fa-users"></i> About</a>
     <a href="services.html"><i class="fas fa-tools"></i> Services</a>
     <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
@@ -19,14 +19,16 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="hero">
-    <h1><i class="fas fa-car"></i> Mac Auto Repairs</h1>
-    <p>Reliable, Affordable, Professional Car Care</p>
-    <div>
-      <a href="services.html" class="btn"><i class="fas fa-wrench"></i> Explore Services</a>
-      <a href="contact.html" class="btn cta"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+  <header class="hero home-hero">
+    <div class="hero-content">
+      <h1><i class="fas fa-car"></i> Mac Auto Repairs</h1>
+      <p>Reliable, Affordable, Professional Car Care</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn"><i class="fas fa-wrench"></i> Explore Services</a>
+        <a href="contact.html" class="btn cta"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- Welcome Section -->
   <section class="fade-in">
@@ -43,7 +45,7 @@
   </section>
 
   <!-- Highlights Section -->
-  <section class="cards">
+  <section class="cards fade-in">
     <div class="card">
       <i class="fas fa-user-check fa-2x"></i>
       <h3>Expert Team</h3>
@@ -70,37 +72,18 @@
   <section class="fade-in">
     <h2><i class="fas fa-cogs"></i> Featured Services</h2>
     <div class="cards">
-      <div class="card">
-        <i class="fas fa-oil-can"></i>
-        <h3>Oil Changes</h3>
-        <p>Keep your engine running smoothly.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-car-battery"></i>
-        <h3>Battery Replacement</h3>
-        <p>Reliable power for every journey.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-tachometer-alt"></i>
-        <h3>Diagnostics</h3>
-        <p>Accurate checks to prevent costly repairs.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-car-crash"></i>
-        <h3>Accident Repairs</h3>
-        <p>Panel beating and restoration services.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-car-side"></i>
-        <h3>Wheel Alignment</h3>
-        <p>Safe handling and longer tire life.</p>
-      </div>
+      <div class="card"><i class="fas fa-oil-can"></i><h3>Oil Changes</h3><p>Keep your engine running smoothly.</p></div>
+      <div class="card"><i class="fas fa-car-battery"></i><h3>Battery Replacement</h3><p>Reliable power for every journey.</p></div>
+      <div class="card"><i class="fas fa-tachometer-alt"></i><h3>Diagnostics</h3><p>Accurate checks to prevent costly repairs.</p></div>
+      <div class="card"><i class="fas fa-car-crash"></i><h3>Accident Repairs</h3><p>Panel beating and restoration services.</p></div>
+      <div class="card"><i class="fas fa-car-side"></i><h3>Wheel Alignment</h3><p>Safe handling and longer tire life.</p></div>
     </div>
   </section>
 
   <!-- Why Choose Us -->
-  <section class="fade-in">
+  <section class="fade-in why-choose">
     <h2><i class="fas fa-star"></i> Why Choose Us</h2>
+    <p class="section-tagline">Your trusted partner on the road</p>
     <div class="choose-grid">
       <div><i class="fas fa-check-circle"></i> Trusted by Johannesburg drivers</div>
       <div><i class="fas fa-tools"></i> State-of-the-art equipment</div>
@@ -111,34 +94,18 @@
   </section>
 
   <!-- Our Values -->
-  <section class="fade-in">
+  <section class="fade-in values">
     <h2><i class="fas fa-heart"></i> Our Values</h2>
     <div class="values-grid">
-      <div class="value-card">
-        <i class="fas fa-balance-scale"></i>
-        <h3>Integrity</h3>
-        <p>We believe in honest advice and transparent service.</p>
-      </div>
-      <div class="value-card">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Innovation</h3>
-        <p>Constantly upgrading our tools and techniques.</p>
-      </div>
-      <div class="value-card">
-        <i class="fas fa-users"></i>
-        <h3>Community</h3>
-        <p>Supporting local initiatives and building long-term relationships.</p>
-      </div>
-      <div class="value-card">
-        <i class="fas fa-leaf"></i>
-        <h3>Sustainability</h3>
-        <p>Eco-friendly practices to reduce our footprint.</p>
-      </div>
+      <div class="value-card"><i class="fas fa-balance-scale"></i><h3>Integrity</h3><p>We believe in honest advice and transparent service.</p></div>
+      <div class="value-card"><i class="fas fa-lightbulb"></i><h3>Innovation</h3><p>Constantly upgrading our tools and techniques.</p></div>
+      <div class="value-card"><i class="fas fa-users"></i><h3>Community</h3><p>Supporting local initiatives and building long-term relationships.</p></div>
+      <div class="value-card"><i class="fas fa-leaf"></i><h3>Sustainability</h3><p>Eco-friendly practices to reduce our footprint.</p></div>
     </div>
   </section>
 
   <!-- Partners & Certifications -->
-  <section class="fade-in">
+  <section class="fade-in partners">
     <h2><i class="fas fa-certificate"></i> Partners & Certifications</h2>
     <p>We are proud to be affiliated with leading automotive organizations and certified by industry bodies.</p>
     <ul>
@@ -160,6 +127,11 @@
     <p>&copy; 2026 Mac Auto Repairs | Designed by Shravan</p>
     <p><i class="fas fa-clock"></i> Mon–Sat: 8am–6pm | <i class="fas fa-phone"></i> +27 82 054 8366</p>
     <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
   </footer>
 </body>
 </html>
