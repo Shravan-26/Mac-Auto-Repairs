@@ -1,44 +1,31 @@
 /* =========================
-   Theme Colors
+   Theme Colors (Refined)
 ========================= */
 :root {
-  --primary: #ffb400;   /* Warm golden yellow */
-  --secondary: #4a90e2; /* Vibrant mechanic blue */
-  --accent: #ff6f61;    /* Coral highlight */
-  --dark: #222;         /* Industrial dark grey */
-  --light: #fafafa;     /* Neutral light */
+  --primary: #e63946;   /* Strong red for energy */
+  --secondary: #1d3557; /* Deep navy for professionalism */
+  --accent: #f1faee;    /* Clean off-white for contrast */
+  --dark: #222;         /* Neutral dark grey */
+  --light: #f8f9fa;     /* Soft light background */
 }
 
 /* =========================
    Global Styles
 ========================= */
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: var(--dark);
-
-  /* Animated gradient background */
-  background: linear-gradient(-45deg, #f0f4f8, #e6ebef, #4a90e2, #ffb400);
-  background-size: 400% 400%;
-  animation: gradientShift 25s ease infinite;
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  background: var(--light); /* Clean, solid background */
 }
 
 /* =========================
    Navigation Bar
 ========================= */
 nav {
-  background: rgba(34, 34, 34, 0.85);
-  backdrop-filter: blur(8px);
+  background: var(--secondary);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -46,74 +33,39 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.4s ease;
-}
-nav.scrolled {
-  padding: 0.6rem 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 nav a {
-  color: #fff;
+  color: var(--accent);
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
-  position: relative;
   transition: color 0.3s ease;
 }
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--primary);
-  transition: width 0.3s ease;
+nav a:hover {
+  color: var(--primary);
 }
-nav a:hover::after { width: 100%; }
-nav a:hover { color: var(--accent); }
 
 /* =========================
    Hero Section
 ========================= */
 .hero {
-  background: linear-gradient(135deg, #2c3e50, #4a90e2, #ffb400);
-  background-size: 300% 300%;
-  animation: heroGradient 20s ease infinite;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-@keyframes heroGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.hero h1, .hero p {
-  position: relative;
-  background: rgba(0,0,0,0.55);
-  padding: 15px 25px;
-  border-radius: 8px;
-  animation: fadeIn 2s ease-in-out;
+  color: var(--accent);
 }
 .hero h1 {
-  text-shadow: 0 0 12px rgba(255,180,0,0.8);
+  font-size: 3rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
-/* Gear watermark */
-.hero::after {
-  content: "⚙️";
-  font-size: 12rem;
-  color: rgba(255,255,255,0.05);
-  position: absolute;
-  bottom: -20px;
-  right: 20px;
-  transform: rotate(-15deg);
+.hero p {
+  max-width: 600px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 /* =========================
@@ -121,36 +73,16 @@ nav a:hover { color: var(--accent); }
 ========================= */
 button, .btn {
   background: var(--primary);
-  color: #000;
+  color: #fff;
   padding: 12px 26px;
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 button:hover, .btn:hover {
   background: var(--secondary);
-  color: #fff;
-  transform: scale(1.05);
-}
-.btn.cta {
-  background: var(--accent);
-  color: #fff;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 0 15px rgba(255,111,97,0.6);
-  animation: pulse 2s infinite;
-}
-.btn.cta:hover {
-  background: var(--secondary);
-  box-shadow: 0 0 25px rgba(74,144,226,0.8);
-}
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,180,0,0.7); }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,180,0,0.7); }
-  100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,180,0,0.7); }
 }
 
 /* =========================
@@ -158,41 +90,10 @@ button:hover, .btn:hover {
 ========================= */
 section {
   padding: 4rem 2rem;
-  position: relative;
-}
-/* Steel texture overlay */
-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(34,34,34,0.05),
-    rgba(34,34,34,0.05) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-  pointer-events: none;
+  background: var(--accent);
 }
 section:nth-child(even) {
-  background: linear-gradient(135deg, #f7f7f7, #eaeaea, #d9e2ec);
-  background-size: 300% 300%;
-  animation: sectionSteel 30s ease infinite;
-}
-@keyframes sectionSteel {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-section:nth-child(odd) {
-  background: linear-gradient(135deg, #ffffff, #f0f8ff, #e6ebef);
-  background-size: 300% 300%;
-  animation: sectionBlue 35s ease infinite;
-}
-@keyframes sectionBlue {
-  0% { background-position: 50% 0%; }
-  50% { background-position: 50% 100%; }
-  100% { background-position: 50% 0%; }
+  background: #ffffff;
 }
 
 /* =========================
@@ -203,7 +104,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
-  position: relative;
 }
 h2::after {
   content: "";
@@ -212,58 +112,44 @@ h2::after {
   height: 4px;
   background: var(--primary);
   margin-top: 0.5rem;
-  border-radius: 2px;
 }
 
 /* =========================
    Cards Layout
 ========================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  padding: 3rem;
-}
 .card {
-  background: var(--light);
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 8px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  border: 2px dashed var(--secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-  border: 2px solid var(--accent);
-  transform: scale(1.05);
+  transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 .card i {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 2rem;
   margin-bottom: 15px;
-  transition: color 0.3s ease;
 }
-.card:hover i { color: var(--accent); }
 
 /* =========================
    Footer
 ========================= */
 footer {
-  background: var(--dark);
-  color: #ccc;
+  background: var(--secondary);
+  color: var(--accent);
   text-align: center;
   padding: 2rem;
-  border-top: 6px double var(--primary);
 }
 footer a {
-  color: var(--secondary);
+  color: var(--primary);
   text-decoration: none;
 }
-footer a:hover { color: var(--primary)
-; 
+footer a:hover {
+  color: var(--accent);
 }
 
 /* =========================
@@ -281,9 +167,10 @@ footer a:hover { color: var(--primary)
    Services Hero
 ========================= */
 .services-hero {
-  background: linear-gradient(135deg, #4a90e2, #ffb400, #2c3e50);
-  background-size: 300% 300%;
-  animation: heroGradient 20s ease infinite;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--accent);
+  text-align: center;
+  padding: 5rem 2rem;
 }
 .services-hero h1 {
   font-size: 3rem;
@@ -292,6 +179,7 @@ footer a:hover { color: var(--primary)
 .services-hero p {
   max-width: 600px;
   margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
 }
 
 /* =========================
@@ -316,10 +204,12 @@ footer a:hover { color: var(--primary)
 .cta-section {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: var(--primary);
   color: #fff;
 }
-.cta-section h2 { color: #fff; }
+.cta-section h2 {
+  color: #fff;
+}
 .cta-section p {
   margin: 1rem auto;
   max-width: 600px;
@@ -343,16 +233,17 @@ footer a:hover { color: var(--primary)
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
-  animation: fadeIn 0.5s ease-in;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 .close {
   float: right;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--accent);
+  color: var(--primary);
 }
-.close:hover { color: var(--secondary); }
+.close:hover {
+  color: var(--secondary);
+}
 
 /* =========================
    Values Grid
@@ -364,28 +255,22 @@ footer a:hover { color: var(--primary)
   margin-top: 2rem;
 }
 .value-card {
-  background: var(--light);
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 8px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid transparent;
-  border-image: linear-gradient(45deg, var(--primary), var(--secondary)) 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .value-card:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 .value-card i {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 2.2rem;
   margin-bottom: 15px;
-  transition: color 0.3s ease;
 }
-.value-card:hover i { color: var(--accent); }
 .value-card h3 {
   margin-bottom: 0.5rem;
   color: var(--secondary);
@@ -402,9 +287,9 @@ footer a:hover { color: var(--primary)
   margin-top: 2rem;
 }
 .choose-grid div {
-  background: var(--light);
+  background: #fff;
   padding: 1.2rem;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   font-weight: 500;
   display: flex;
@@ -420,6 +305,7 @@ footer a:hover { color: var(--primary)
   margin-right: 0.6rem;
   font-size: 1.2rem;
 }
+
 
 
 
