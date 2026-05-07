@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Mac Auto Repairs</title>
+  <meta name="description" content="Explore Mac Auto Repairs services in Johannesburg including general repairs, oil changes, battery service, brakes, diagnostics, and AC servicing.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -12,47 +13,49 @@
   <nav>
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
     <a href="about.html"><i class="fas fa-users"></i> About</a>
-    <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+    <a href="services.html" class="active"><i class="fas fa-tools"></i> Services</a>
     <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
     <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
   </nav>
 
   <!-- Hero Section -->
-  <div class="hero">
-    <h1><i class="fas fa-tools"></i> Our Services</h1>
-    <p>Comprehensive auto repair and maintenance solutions to keep you on the road safely.</p>
-  </div>
+  <header class="hero services-hero">
+    <div class="hero-content">
+      <h1><i class="fas fa-tools"></i> Our Services</h1>
+      <p>Comprehensive auto repair and maintenance solutions to keep you on the road safely.</p>
+    </div>
+  </header>
 
   <!-- Services Grid -->
   <section id="services" class="fade-in">
     <h2><i class="fas fa-cogs"></i> What We Offer</h2>
     <div class="cards">
-      <div class="card" onclick="openModal('repairsModal')">
+      <div class="card" onclick="openModal('repairsModal')" tabindex="0">
         <i class="fas fa-tools"></i>
         <h3>General Repairs</h3>
         <p>From minor fixes to major overhauls.</p>
       </div>
-      <div class="card" onclick="openModal('oilModal')">
+      <div class="card" onclick="openModal('oilModal')" tabindex="0">
         <i class="fas fa-oil-can"></i>
         <h3>Oil Change</h3>
         <p>Quick and efficient oil changes.</p>
       </div>
-      <div class="card" onclick="openModal('batteryModal')">
+      <div class="card" onclick="openModal('batteryModal')" tabindex="0">
         <i class="fas fa-car-battery"></i>
         <h3>Battery Service</h3>
         <p>Testing, replacement, and installation.</p>
       </div>
-      <div class="card" onclick="openModal('brakeModal')">
+      <div class="card" onclick="openModal('brakeModal')" tabindex="0">
         <i class="fas fa-car-crash"></i>
         <h3>Brake & Suspension</h3>
         <p>Safety checks and expert repairs.</p>
       </div>
-      <div class="card" onclick="openModal('diagnosticsModal')">
+      <div class="card" onclick="openModal('diagnosticsModal')" tabindex="0">
         <i class="fas fa-tachometer-alt"></i>
         <h3>Diagnostics</h3>
         <p>Advanced computer diagnostics.</p>
       </div>
-      <div class="card" onclick="openModal('acModal')">
+      <div class="card" onclick="openModal('acModal')" tabindex="0">
         <i class="fas fa-snowflake"></i>
         <h3>Air Conditioning</h3>
         <p>Stay cool with full AC service.</p>
@@ -61,10 +64,10 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="fade-in">
+  <section class="fade-in cta-section">
     <h2><i class="fas fa-calendar-check"></i> Book Your Appointment Today</h2>
     <p>Don’t wait until it’s too late—schedule your service now and drive with confidence.</p>
-    <a href="contact.html" class="btn"><i class="fas fa-phone"></i> Contact Us</a>
+    <a href="contact.html" class="btn cta"><i class="fas fa-phone"></i> Contact Us</a>
   </section>
 
   <!-- Footer -->
@@ -73,49 +76,49 @@
   </footer>
 
   <!-- Modals -->
-  <div id="repairsModal" class="modal">
+  <div id="repairsModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('repairsModal')">&times;</span>
+      <span class="close" onclick="closeModal('repairsModal')" aria-label="Close">&times;</span>
       <h2>General Repairs</h2>
       <p>We handle everything from engine tune-ups to transmission checks. Our certified mechanics use modern tools to ensure your car runs like new.</p>
     </div>
   </div>
 
-  <div id="oilModal" class="modal">
+  <div id="oilModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('oilModal')">&times;</span>
+      <span class="close" onclick="closeModal('oilModal')" aria-label="Close">&times;</span>
       <h2>Oil Change</h2>
       <p>We provide fast oil changes using premium oils and filters, improving performance and fuel efficiency.</p>
     </div>
   </div>
 
-  <div id="batteryModal" class="modal">
+  <div id="batteryModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('batteryModal')">&times;</span>
+      <span class="close" onclick="closeModal('batteryModal')" aria-label="Close">&times;</span>
       <h2>Battery Service</h2>
       <p>We test, replace, and install reliable batteries. Free diagnostics included with every battery service.</p>
     </div>
   </div>
 
-  <div id="brakeModal" class="modal">
+  <div id="brakeModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('brakeModal')">&times;</span>
+      <span class="close" onclick="closeModal('brakeModal')" aria-label="Close">&times;</span>
       <h2>Brake & Suspension</h2>
       <p>We ensure your brakes and suspension are safe and responsive. Drive with confidence knowing your car is road-ready.</p>
     </div>
   </div>
 
-  <div id="diagnosticsModal" class="modal">
+  <div id="diagnosticsModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('diagnosticsModal')">&times;</span>
+      <span class="close" onclick="closeModal('diagnosticsModal')" aria-label="Close">&times;</span>
       <h2>Diagnostics</h2>
       <p>Our advanced computer diagnostics quickly identify issues, saving you time and money on repairs.</p>
     </div>
   </div>
 
-  <div id="acModal" class="modal">
+  <div id="acModal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('acModal')">&times;</span>
+      <span class="close" onclick="closeModal('acModal')" aria-label="Close">&times;</span>
       <h2>Air Conditioning</h2>
       <p>We offer full AC servicing, from re-gassing to repairs, ensuring comfort in every season.</p>
     </div>
@@ -124,19 +127,33 @@
   <!-- JavaScript -->
   <script>
     function openModal(id) {
-      document.getElementById(id).style.display = "block";
+      const modal = document.getElementById(id);
+      modal.style.display = "flex";
+      modal.setAttribute("aria-hidden", "false");
     }
     function closeModal(id) {
-      document.getElementById(id).style.display = "none";
+      const modal = document.getElementById(id);
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
     }
     window.onclick = function(event) {
       const modals = document.querySelectorAll(".modal");
       modals.forEach(modal => {
         if (event.target === modal) {
           modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
         }
       });
     }
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        document.querySelectorAll(".modal").forEach(modal => {
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+        });
+      }
+    });
   </script>
 </body>
 </html>
+
