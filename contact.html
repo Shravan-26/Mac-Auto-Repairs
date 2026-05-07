@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav>
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
     <a href="about.html"><i class="fas fa-users"></i> About</a>
     <a href="services.html"><i class="fas fa-tools"></i> Services</a>
@@ -55,7 +55,7 @@
   <!-- Contact Form -->
   <section class="fade-in contact-form">
     <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
-    <form action="#" method="post">
+    <form id="contactForm">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -67,11 +67,18 @@
 
       <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
     </form>
+    <div class="success-message" id="successMessage">
+      ✅ Thank you! Your message has been sent successfully.
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Mac Auto Repairs | Designed by Shravan</p>
   </footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
 </body>
 </html>
+
