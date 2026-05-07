@@ -399,5 +399,62 @@ footer a:hover {
   }
 }
 
+/* Contact Cards Hover */
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.contact-card i {
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.contact-card:hover i {
+  color: var(--primary-light);
+}
 
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+.contact-form button {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.contact-form button:hover {
+  background: var(--secondary-light);
+  transform: scale(1.05);
+}
 
+/* Success Message Animation */
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #2ecc71;
+  color: #fff;
+  border-radius: 6px;
+  animation: fadeIn 0.8s ease forwards;
+}
