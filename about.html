@@ -6,63 +6,16 @@
   <title>About Us | Mac Auto Repairs</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* Extra styles for hamburger menu */
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--accent);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .nav-links.show {
-        display: flex;
-      }
-      nav a {
-        margin: 0.5rem 0;
-        width: 100%;
-      }
-      .nav-toggle {
-        display: block;
-        margin-left: auto;
-      }
-    }
-
-    nav a.active {
-      color: var(--primary-light);
-      font-weight: 700;
-      border-bottom: 2px solid var(--primary);
-    }
-
-    section p {
-      max-width: 800px;
-      margin: 0 auto 1rem;
-    }
-
-    .about-hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
-    <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+  <nav class="main-nav">
+    <div class="nav-brand">
+      <a href="index.html"><i class="fas fa-car"></i> Mac Auto Repairs</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
     <div class="nav-links">
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <a href="about.html" class="active"><i class="fas fa-users"></i> About</a>
@@ -147,14 +100,13 @@
 
   <!-- JS for Hamburger Menu -->
   <script>
-    const toggleBtn = document.querySelector('.nav-toggle');
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    toggleBtn.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
     });
   </script>
 </body>
 </html>
-
-
