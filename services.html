@@ -10,7 +10,7 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
+  <nav class="main-nav">
     <div class="nav-brand">
       <a href="index.html"><i class="fas fa-car"></i> Mac Auto Repairs</a>
     </div>
@@ -91,7 +91,6 @@
     </div>
   </div>
 
-  <!-- Repeat same structure for other modals -->
   <div id="oilModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
       <span class="close" onclick="closeModal('oilModal')" aria-label="Close">&times;</span>
@@ -100,7 +99,37 @@
     </div>
   </div>
 
-  <!-- ... other modals unchanged ... -->
+  <div id="batteryModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('batteryModal')" aria-label="Close">&times;</span>
+      <h2>Battery Service</h2>
+      <p>We test, replace, and install reliable batteries. Free diagnostics included with every battery service.</p>
+    </div>
+  </div>
+
+  <div id="brakeModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('brakeModal')" aria-label="Close">&times;</span>
+      <h2>Brake & Suspension</h2>
+      <p>We ensure your brakes and suspension are safe and responsive. Drive with confidence knowing your car is road-ready.</p>
+    </div>
+  </div>
+
+  <div id="diagnosticsModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('diagnosticsModal')" aria-label="Close">&times;</span>
+      <h2>Diagnostics</h2>
+      <p>Our advanced computer diagnostics quickly identify issues, saving you time and money on repairs.</p>
+    </div>
+  </div>
+
+  <div id="acModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('acModal')" aria-label="Close">&times;</span>
+      <h2>Air Conditioning</h2>
+      <p>We offer full AC servicing, from re-gassing to repairs, ensuring comfort in every season.</p>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script>
